@@ -1,0 +1,67 @@
+$peach: hsl(28, 100%, 79%);
+$plum: hsl(329, 36%, 59%);
+$blueberry: hsl(229, 100%, 67%);
+
+$white: #fff;
+$black: #000;
+$light-grey: #dfdfdf;
+
+$main-gradient-up: linear-gradient(to top, $peach 0%, $plum 25%, $blueberry 50%);
+$main-gradient-right: linear-gradient(to right, $peach 0%, $plum 25%, $blueberry 50%);
+
+$nav-height: 72px;
+
+@mixin d-flex($orient: row, $wrap: wrap, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-flow: $orient $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin box-reset() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin h1 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@mixin h2 {
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+@mixin h3 {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+@mixin h4 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin body {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+@mixin inverted ($color: black, $background-color: white) {
+  color: invert($color);
+  background-color: invert($background-color);
+}
+
+@mixin invisible {
+  display: none;
+}

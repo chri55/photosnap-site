@@ -1,3 +1,15 @@
+@use '/src/global-styles/global-styles';
+
+* {
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
 .App {
   text-align: center;
 }

@@ -1,0 +1,37 @@
+@import '../../global-styles/global.scss';
+
+.mobile {
+  @include invisible();
+}
+
+.header {
+  height: $nav-height;
+  @include d-flex(row, nowrap, space-between, center);
+  padding: 10px 5%;
+  background: $white;
+}
+
+.link {
+  @include h4();
+  color: $black;
+  text-decoration: none;
+  margin: 0 21px;
+  transition: 0.3s;
+  &:hover {
+    color: $light-grey;
+  }
+}
+
+.get-invite {
+  @include h4();
+  background-color: $black;
+  color: $white;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 12px 24px;
+
+  &:hover {
+    background-color: $light-grey;
+    color: $black;
+  }
+}

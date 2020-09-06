@@ -1,0 +1,76 @@
+@import '../../global-styles/global.scss';
+
+.hero-section {
+  @include box-reset();
+  @include d-flex(row, nowrap, flex-start, center);
+  width: 100%;
+  height: 600px;
+  color: $black;
+  background-color: $white;
+
+  a {
+    @include h4();
+    color: $black;
+    text-decoration: none;
+    @include d-flex(row, nowrap, space-between, center);
+
+    svg {
+      margin-left: 34px;
+      stroke: $black;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.main {
+    height: 650px;
+  }
+
+  &.inverted {
+    @include inverted($black, $white);
+
+    a {
+      color: $white;
+
+      svg {
+        stroke: $white;
+      }
+    }
+  }
+
+  &.reverse {
+    @include d-flex(row-reverse, nowrap, flex-start, center);
+  }
+}
+
+.hero-img {
+  height: 100%;
+  width: 830px;
+  object-fit: cover;
+  overflow: hidden;
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.text {
+  @include box-reset();
+  @include d-flex(column, nowrap, center, flex-start);
+  width: calc(100vw - 830px);
+  height: 100%;
+  padding: 136px 111px;
+  * {
+    text-align: left;
+  }
+}
+
+.headline {
+  @include h1();
+}
+
+.body-text {
+  @include body();
+}
