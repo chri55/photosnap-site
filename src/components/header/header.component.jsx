@@ -33,7 +33,7 @@ class Header extends Component {
     return (
       <div className="header">
       <Link to='/'>
-        <img src={logo} alt="Photosnap"/>
+        <img className="main-logo" src={logo} alt="Photosnap"/>
       </Link>
         <div className="mobile menu-button">
           <img 

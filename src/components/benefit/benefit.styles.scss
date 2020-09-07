@@ -1,0 +1,26 @@
+@import '../../global-styles/global.scss';
+
+.benefit {
+  @include d-flex(column, nowrap, flex-end, center);
+  height: 236px;
+  margin: 0px 10px;
+  
+  img {
+    @include box-reset();
+    margin-bottom: 50px;
+
+    width: 72px;
+    height: auto;
+  }
+
+  h3 {
+    @include box-reset();
+    @include h3();
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  p {
+    @include box-reset();
+    @include body();
+  }
+}

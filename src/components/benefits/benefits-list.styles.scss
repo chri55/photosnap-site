@@ -1,0 +1,7 @@
+@import '../../global-styles/global.scss';
+
+.benefits-row {
+  @include d-flex(row, nowrap, space-between, center);
+  padding: 120px 165px;
+
+}

@@ -1,5 +1,12 @@
 @import '../../global-styles/global.scss';
 
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  33% {transform: translateY(-5px);}
+  66% {transform: translateY(5px);}
+  100% {transform: translateY(0px);}
+}
+
 .mobile {
   @include invisible();
 }
@@ -9,6 +16,16 @@
   @include d-flex(row, nowrap, space-between, center);
   padding: 10px 5%;
   background: $white;
+}
+
+a:hover {
+  .main-logo {
+    animation-name: bounce;
+    animation-timing-function: linear;
+    animation-duration: 0.2s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
 }
 
 .link {

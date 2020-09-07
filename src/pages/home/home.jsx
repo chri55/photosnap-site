@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 
+import {
+  homeHero1Desk,
+  homeHero1Mob,
+  homeHero1Tab,
+  homeHero2Desk,
+  homeHero2Mob,
+  homeHero2Tab,
+  homeHero3Desk,
+  homeHero3Mob,
+  homeHero3Tab,
+
+  stories,
+  benefits,
+
+} from '../../assets';
+
 import HeroSection from '../../components/hero-section/hero-section.component';
-
-import hero1Desktop from '../../assets/home/desktop/create-and-share.jpg';
-import hero1Tablet from '../../assets/home/tablet/create-and-share.jpg';
-import hero1Mobile from '../../assets/home/mobile/create-and-share.jpg';
-
-import hero2Desktop from '../../assets/home/desktop/beautiful-stories.jpg';
-import hero2Tablet from '../../assets/home/tablet/beautiful-stories.jpg';
-import hero2Mobile from '../../assets/home/mobile/beautiful-stories.jpg';
-
-import hero3Desktop from '../../assets/home/desktop/designed-for-everyone.jpg';
-import hero3Tablet from '../../assets/home/tablet/designed-for-everyone.jpg';
-import hero3Mobile from '../../assets/home/mobile/designed-for-everyone.jpg';
-
+import StoriesList from '../../components/stories-list/stories-list.component';
+import BenefitsList from '../../components/benefits/benefits-list.component';
+import Footer from '../../components/footer/footer.component';
 
 import './home.scss';
 
@@ -31,7 +37,17 @@ class Home extends Component {
   }
 
   render() {
-    const screenSize = this.getScreenWidth();
+    const storiesPreview = [
+      stories.theMountains,
+      stories.sunsetCityscapes,
+      stories.daysVoyage,
+      stories.architecturals,
+    ];
+    const benefitsPreview = [
+      benefits.responsive,
+      benefits.noLimit,
+      benefits.embed,
+    ];
     return (
       <div className='homepage'>
         <HeroSection
@@ -39,9 +55,9 @@ class Home extends Component {
           inverted
           main
           img={this.getScreenWidth(
-            hero1Desktop,
-            hero1Tablet, 
-            hero1Mobile
+            homeHero1Desk,
+            homeHero1Tab, 
+            homeHero1Mob
           )}
           alt="Man on Dock"
           title="Create and Share Your Photo Stories"
@@ -53,9 +69,9 @@ class Home extends Component {
         </HeroSection>
         <HeroSection
           img={this.getScreenWidth(
-            hero2Desktop,
-            hero2Tablet, 
-            hero2Mobile
+            homeHero2Desk,
+            homeHero2Tab, 
+            homeHero2Mob
           )}
           alt="Laptop on Desk"
           title="Beautiful stories every time"
@@ -70,9 +86,9 @@ class Home extends Component {
           reverse
           main
           img={this.getScreenWidth(
-            hero3Desktop,
-            hero3Tablet, 
-            hero3Mobile
+            homeHero3Desk,
+            homeHero3Tab, 
+            homeHero3Mob
           )}
           alt="Photographer"
           title="Designed for everyone"
@@ -82,6 +98,9 @@ class Home extends Component {
           linkTo="/stories"
         >
         </HeroSection>
+        <StoriesList stories={storiesPreview}></StoriesList>
+        <BenefitsList benefits={benefitsPreview}></BenefitsList>
+        <Footer></Footer>
       </div>
     );
   }

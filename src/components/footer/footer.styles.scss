@@ -1,0 +1,54 @@
+@import '../../global-styles/global.scss';
+
+.footer {
+  @include d-flex(row, nowrap, flex-start, stretch);
+  width: 100%;
+  height: 250px;
+  background-color: $black;
+  padding: 65px 168px;
+  * {
+    color: $white;
+  }
+}
+
+.footer-inner {
+  width: 100%;
+  @include d-flex(row, nowrap, flex-start, flex-start)
+}
+
+.footer-cols {
+  @include d-flex(column, nowrap, space-between, flex-start);
+}
+
+
+.footer-col {
+  height: 100%;
+  @include d-flex(column, nowrap, space-between, flex-start);
+}
+
+.main-logo-footer  {
+  path {
+    &:first-of-type {
+      fill: $white;
+      fill-rule: evenodd;
+    }
+  }
+}
+
+.media-links {
+  width: 100%;
+  @include d-flex(row, nowrap, space-between, baseline);
+  
+  svg {
+    transition: 0.3s;
+    cursor:pointer;
+  }
+
+  svg:hover{
+    path {
+      fill: $white;
+    }
+  }
+}
+
+

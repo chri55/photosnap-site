@@ -1,0 +1,80 @@
+@import '../../global-styles/global.scss';
+
+.story {
+  @include d-flex(column, nowrap, flex-end, flex-start);
+  width: 25%;
+  transition: transform 0.4s;
+
+  * {
+    color: white;
+  }
+
+  &::after {
+    content: "";
+    height: 0px;
+    //margin-top: -10px;
+    transform: translateY(10px);
+    width: 100%;
+    background: $main-gradient-right;
+  }
+
+  &:hover {
+    overflow: visible;
+    transform: translateY(-24px);
+    cursor: pointer;
+
+    &::after {
+      height: 10px;
+      margin-top: -10px;
+    }
+  }
+}
+
+.story-inner {
+  width: 100%;
+  @include d-flex(column, nowrap, flex-end, flex-start);
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%)
+}
+
+.story-title {
+  @include box-reset();
+  @include h3();
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.story-by {
+  @include box-reset();
+  @include body();
+  font-size: 13px;
+  margin-bottom: 16px;
+
+}
+
+hr {
+  @include box-reset();
+  width: 100%;
+  opacity: 0.5;
+}
+
+.read {
+  @include d-flex(row, nowrap, space-between, center);
+  width: 100%;
+  margin-top: 16px;
+
+  a {
+    @include h4();
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    filter: invert(100%);
+  }
+}
+
