@@ -6,11 +6,23 @@ import arrow from '../../assets/shared/desktop/arrow.svg';
 import './hero-section.styles.scss';
 
 class HeroSection extends Component {
+
+  getScreenWidth(desktop, tablet, mobile) {
+    const screenW = window.innerWidth;
+    if (screenW > 800) {
+      return desktop;
+    } else if (screenW < 800 && screenW > 650) {
+      return tablet
+    } else {
+      return mobile
+    };
+  }
+
   render() {
     const {
       reverse, 
       inverted, 
-      img,
+      images,
       alt, 
       title, 
       body,
@@ -21,7 +33,10 @@ class HeroSection extends Component {
     return (
       <div className={`hero-section ${inverted?'inverted':''} ${reverse?'reverse':''} ${main?'main':''}`}>
         <div className="hero-img">
-          <img src={`${img}`} alt={`${alt}`}/>
+          <img 
+            src={this.getScreenWidth(images.desk, images.tablet, images.mobile)} 
+            alt={`${alt}`}
+          />
         </div>
         <div className="text">
           <h2 className="headline">{`${title}`}</h2>

@@ -5,6 +5,7 @@
   height: 500px;
   @include d-flex(row, nowrap, stretch, stretch);
   //overflow: hidden;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 650px) {

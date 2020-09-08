@@ -7,7 +7,11 @@ import {
 } from 'react-router-dom';
 
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 import Home from './pages/home/home.jsx';
+import Stories from './pages/stories/stories.jsx';
+import Features from './pages/features/features.jsx';
+import Pricing from './pages/pricing/pricing.jsx';
 
 import './App.scss';
 
@@ -18,18 +22,20 @@ function App() {
         <Header></Header>
         <Switch>
           <Route path="/stories">
-            <div className="feature">Stories</div>
+            <Stories></Stories>
           </Route>
           <Route path="/features">
-            <div className="feature">Features</div>
+            <Features></Features>
           </Route>
           <Route path="/pricing">
-            <div className="feature">Pricing</div>
+            <Pricing></Pricing>
           </Route>
           <Route path="/">
             <Home></Home>
           </Route>
         </Switch>
+        <Footer></Footer>
+
       </div>
     </BrowserRouter>
   );

@@ -24,3 +24,11 @@
     @include body();
   }
 }
+
+@media only screen and (max-width: 500px) {
+  
+  .benefit img {
+    height: auto;
+    width: 48px;
+  }
+}

@@ -78,9 +78,9 @@ const landMob  = require('./stories/mobile/land-of-dreams.jpg');
 const milkyDesk = require('./stories/desktop/milky-way.jpg');
 const milkyMob  = require('./stories/mobile/milky-way.jpg');
 
-export const moonDesk = require('./stories/desktop/moon-of-appalacia.jpg');
-export const moonMob  = require('./stories/mobile/moon-of-appalacia.jpg');
-export const moonTab  = require('./stories/tablet/moon-of-appalacia.jpg');
+const moonDesk = require('./stories/desktop/moon-of-appalacia.jpg');
+const moonMob  = require('./stories/mobile/moon-of-appalacia.jpg');
+const moonTab  = require('./stories/tablet/moon-of-appalacia.jpg');
 
 const mountainsDesk = require('./stories/desktop/mountains.jpg');
 const mountainsMob  = require('./stories/mobile/mountains.jpg');
@@ -104,10 +104,59 @@ const worldDesk = require('./stories/desktop/world-tour.jpg');
 const worldMob  = require('./stories/mobile/world-tour.jpg');
 // END Stories Images
 
+export const home = {
+  hero1: {
+    reverse: true,
+    inverted: true,
+    main: true,
+    images: {
+      desk: homeHero1Desk,
+      tablet: homeHero1Tab,
+      mobile: homeHero1Mob,
+    },
+    alt:"Man On Dock",
+    title:"Create and Share Your Photo Stories",
+    body: "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+    linkText: "Get An Invite",
+    linkTo:"#",
+  },
+  hero2: {
+    reverse: false,
+    inverted: false,
+    main: false,
+    images: {
+      desk: homeHero2Desk,
+      tablet: homeHero2Tab,
+      mobile: homeHero2Mob,
+    },
+    alt:"Laptop on Desk",
+    title:"Beautiful stories every time",
+    body: "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
+    linkText: "View the stories",
+    linkTo:"/stories",
+  },
+  hero3: {
+    reverse: true,
+    inverted: false,
+    main: false,
+    images: {
+      desk: homeHero3Desk,
+      tablet: homeHero3Tab,
+      mobile: homeHero3Mob,
+    },
+    alt:"Photographer",
+    title:"Designed for Everyone",
+    body: "Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it.",
+    linkText: "View the stories",
+    linkTo:"/stories",
+  },
+}
+
 export const stories = {
   theMountains: {
     title: "The Mountains",
     by: "John Appleseed",
+    date: "April 16th 2020",
     images: {
       desk: mountainsDesk,
       tablet: null,
@@ -122,6 +171,7 @@ export const stories = {
       tablet: null,
       mobile: cityscapeMob,
     },
+    date: "April 14th 2020",
   },
   daysVoyage: {
     title: "18 Days Voyage",
@@ -131,6 +181,7 @@ export const stories = {
       tablet: null,
       mobile: daysVoyageMob,
     },
+    date:"April 11th 2020",
   },
   architecturals: {
     title: "Architecturals",
@@ -140,6 +191,7 @@ export const stories = {
       tablet: null,
       mobile: architecturalsMob,
     },
+    date: "April 9th 2020",
   },
   worldTour: {
     title: "World Tour 2019",
@@ -149,6 +201,7 @@ export const stories = {
       tablet: null,
       mobile: worldMob,
     },
+    date: "April 7th 2020"
   },
   unforeseen: {
     title: "Unforeseen Corners",
@@ -158,6 +211,7 @@ export const stories = {
       tablet: null,
       mobile: unforeseenMob,
     },
+    date: "April 3rd 2020",
   },
   king: {
     title: "King on Africa: Part II",
@@ -167,6 +221,7 @@ export const stories = {
       tablet: null,
       mobile: kingMob,
     },
+    date: "March 29th 2020"
   },
   trip: {
     title: "The Trip to Nowhere",
@@ -176,6 +231,7 @@ export const stories = {
       tablet: null,
       mobile: tripMob,
     },
+    date: "March 21st 2020",
   },
   rage: {
     title: "Rage of the Sea",
@@ -185,6 +241,8 @@ export const stories = {
       tablet: null,
       mobile: rageMob,
     },
+    date: "March 19th 2020",
+
   },
   running: {
     title: "Running Free",
@@ -194,6 +252,8 @@ export const stories = {
       tablet: null,
       mobile: runningMob,
     },
+    date: "March 16th 2020",
+
   },
   behind: {
     title: "Behind the Waves",
@@ -203,6 +263,8 @@ export const stories = {
       tablet: null,
       mobile: behindMob,
     },
+    date: "March 11th 2020",
+
   },
   calm: {
     title: "Calm Waters",
@@ -212,6 +274,8 @@ export const stories = {
       tablet: null,
       mobile: calmMob,
     },
+    date: "March 9th 2020",
+
   },
   milky: {
     title: "The Milky Way",
@@ -221,6 +285,8 @@ export const stories = {
       tablet: null,
       mobile: milkyMob,
     },
+    date: "March 5th 2020",
+
   },
   darkForest: {
     title: "Night at the Dark Forest",
@@ -230,6 +296,8 @@ export const stories = {
       tablet: null,
       mobile: darkForestMob,
     },
+    date: "March 4th 2020",
+
   },
   somwarpet: {
     title: "Somwarpet's Beauty",
@@ -239,6 +307,8 @@ export const stories = {
       tablet: null,
       mobile: somwarpetMob,
     },
+    date: "March 1st 2020",
+
   },
   land: {
     title: "Land of Dreams",
@@ -248,10 +318,35 @@ export const stories = {
       tablet: null,
       mobile: landMob,
     },
+    date: "February 25th 2020",
   },
+  moonFeature: {
+    title: "Hazy Full Moon of Appalachia",
+    by: "John Appleseed",
+    images: {
+      desk: moonDesk,
+      tablet: moonTab,
+      mobile: moonMob,
+    },
+    date: "March 2nd 2020",
+    body: "The dissected plateau area, while not actually made up of geological mountains, is popularly called 'mountains,' especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged."
+  }
 }
 
 export const benefits = {
+  hero: {
+    title: "Features",
+    body: "We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their stories.",
+    images: {
+      desk: featureHeroDesk,
+      tablet: featureHeroTab,
+      mobile: featureHeroMob,
+    },
+    alt: "Person holding camera",
+    reverse: true,
+    inverted: true,
+    main: true,
+  },
   responsive: {
     name: "100% Responsive",
     description: "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
@@ -293,5 +388,42 @@ export const benefits = {
     images: {
       svg: featureDragDrop,
     },
+  },
+}
+
+export const pricing = {
+  hero: {
+    reverse: true,
+    inverted: true,
+    main: true,
+    images: {
+      desk: pricingHeroDesk,
+      tablet: pricingHeroTab,
+      mobile: pricingHeroMob,
+    },
+    alt: "Photographer",
+    title: "Pricing",
+    body: "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."
+  },
+  basic: {
+    inverted: false,
+    name: "Basic",
+    "body": "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+    monthly: '$19.00',
+    yearly: '$190.00',
+  },
+  pro: {
+    inverted: true,
+    name: "Pro",
+    "body": "More advanced features available. Recommended for photography veterans and professionals.",
+    monthly: '$39.00',
+    yearly: '$390.00',
+  },
+  business: {
+    inverted: false,
+    name: "Business",
+    "body": "Additional features available such as more detailed metrics. Recommended for business owners.",
+    monthly: '$99.00',
+    yearly: '$990.00',
   },
 }

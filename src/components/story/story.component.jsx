@@ -18,6 +18,8 @@ class Story extends Component {
       images,
       by,
       title,
+      date, 
+      nodate,
     } = this.props;
     return (
       <div 
@@ -31,6 +33,7 @@ class Story extends Component {
         }}
       >
         <div className="story-inner">
+          {!nodate && <p className="date">{date}</p>}
           <h3 className="story-title">{title}</h3>
           <p className="story-by">by {by}</p>
           <hr></hr>

@@ -14,7 +14,7 @@ class StoriesList extends Component {
     return (
       <div className="stories-list">
         {this.props.stories.map(story => (
-          <Story {...story}></Story>
+          <Story nodate={this.props.nodate} {...story}></Story>
         ))}
       </div>
     );

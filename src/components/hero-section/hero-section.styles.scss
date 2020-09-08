@@ -26,6 +26,16 @@
 
   &.main {
     height: 650px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transform: translateY(30px);
+      height: 300px;
+      width: 10px;
+      background: $main-gradient-up;
+    }
   }
 
   &.inverted {
@@ -96,11 +106,28 @@
     img {
       width: auto;
       height: 100%;
+      object-position: center;
     }
   }
 }
 
 @media only screen and (max-width: 650px) {
+
+  .hero-section.main::before {
+    height: 10px;
+    width: 200px;
+    top: 0;
+    left: 5%;
+    background: $main-gradient-right;
+    transform: none;
+    transform: translateY(calc(#{$nav-height} + 350px));
+  }
+
+  .hero-section {
+    height: 650px;
+    min-height: 650px;
+  }
+
   .hero-section,
   .hero-section.reverse {
     @include d-flex(column, nowrap, flex-start, center);
@@ -110,18 +137,21 @@
   .text, 
   .hero-img {
     width: 100%;
-    object-position: center;
-    object-fit: contain;
-  }
-  .hero-img img {
-    width: 100vw;
-    height: auto;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
   }
+  .hero-img{
+    height: 350px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  } 
+
 
   .text {
-    @include d-flex(column, nowrap, flex-start, flex-start)
+    @include d-flex(column, nowrap, center, flex-start);
+    height: 300px;
   }
 
   .headline {

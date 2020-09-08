@@ -1,0 +1,106 @@
+@import '../../global-styles/global.scss';
+
+.feature {
+  @include box-reset();
+  @include d-flex(column, nowrap, flex-start, flex-start);
+  height: 650px;
+  * {
+    color: $white;
+  }
+}
+
+.feature-img {
+  width: 100%;
+  position: absolute;
+  top: $nav-height;
+  z-index: 1;
+  height: 650px;
+  object-fit: cover;
+
+  img {
+    width: 100%;
+  }
+}
+
+.text-container {
+  @include d-flex(column, nowrap, center, flex-start);
+  height: 650px;
+  z-index: 2;
+  padding: 122px 112px;
+  width: 50%;
+  * {
+    text-align: left;
+  }
+}
+
+.row {
+  @include d-flex(row, nowrap, flex-start, center);
+
+  * {
+    margin-right: 16px;
+  }
+}
+
+.grey {
+  color: #fffa
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.upper {
+  @include h4();
+}
+
+.feature-title {
+  @include h1();
+}
+
+.feature-arrow {
+  path {
+    stroke: $white;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .text-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .text-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .feature {
+    height: 825px;
+  }
+
+  .feature-img {
+    top: $nav-height;
+    height: 325px;
+  }
+
+  .text-container {
+    position: absolute;
+    top: calc(#{$nav-height} + 325px);
+    background-color: $black;
+    color: white;
+    height: 500px;
+    padding: 30px 10%;
+  }
+
+  .feature-title {
+    @include h2();
+    
+  }
+}

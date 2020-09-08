@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-  homeHero1Desk,
-  homeHero1Mob,
-  homeHero1Tab,
-  homeHero2Desk,
-  homeHero2Mob,
-  homeHero2Tab,
-  homeHero3Desk,
-  homeHero3Mob,
-  homeHero3Tab,
-
+  home,
   stories,
   benefits,
 
@@ -51,56 +42,19 @@ class Home extends Component {
     return (
       <div className='homepage'>
         <HeroSection
-          reverse
-          inverted
-          main
-          img={this.getScreenWidth(
-            homeHero1Desk,
-            homeHero1Tab, 
-            homeHero1Mob
-          )}
-          alt="Man on Dock"
-          title="Create and Share Your Photo Stories"
-          body="Photosnap is a platform for photographers and visual storytellers. We make it 
-          easy to share photos, tell stories and connect with others."
-          linkText="Get An Invite"
-          linkTo="#"
+          {...home.hero1}
         >
         </HeroSection>
         <HeroSection
-          img={this.getScreenWidth(
-            homeHero2Desk,
-            homeHero2Tab, 
-            homeHero2Mob
-          )}
-          alt="Laptop on Desk"
-          title="Beautiful stories every time"
-          body="We provide design templates to ensure your stories look terrific. Easily add 
-          photos, text, embed maps and media from other networks. Then share your story 
-          with everyone."
-          linkText="View the stories"
-          linkTo="/stories"
+          {...home.hero2}
         >
         </HeroSection>
         <HeroSection
-          reverse
-          main
-          img={this.getScreenWidth(
-            homeHero3Desk,
-            homeHero3Tab, 
-            homeHero3Mob
-          )}
-          alt="Photographer"
-          title="Designed for everyone"
-          body="Photosnap can help you create stories that resonate with your audience.  Our 
-          tool is designed for photographers of all levels, brands, businesses you name it."
-          linkText="View the stories"
-          linkTo="/stories"
+          {...home.hero3}
         >
         </HeroSection>
-        <StoriesList stories={storiesPreview}></StoriesList>
+        <StoriesList nodate stories={storiesPreview}></StoriesList>
         <BenefitsList benefits={benefitsPreview}></BenefitsList>
-        <Footer></Footer>
       </div>
     );
   }
