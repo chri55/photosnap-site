@@ -29,7 +29,7 @@ class Home extends Component {
     const screenW = window.innerWidth;
     if (screenW > 800) {
       return desktop;
-    } else if (screenW < 800 && screenW > 400) {
+    } else if (screenW < 800 && screenW > 650) {
       return tablet
     } else {
       return mobile

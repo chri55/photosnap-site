@@ -26,7 +26,8 @@ class Story extends Component {
           backgroundImage: `url(${
             this.getScreenWidth(images.desk, images.mobile)
           })`,
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         <div className="story-inner">

@@ -24,7 +24,45 @@
 .footer-col {
   height: 100%;
   @include d-flex(column, nowrap, space-between, flex-start);
+
+  &:first-child {
+    margin-right: 110px;
+  }
+
+  &:last-child {
+    margin-left: auto;
+  }
+
+  p {
+    color: #dfdfdf99;
+  }
+
 }
+
+a {
+  @include h4();
+  text-decoration: none;
+
+  &:hover {
+    color: $light-grey;
+  }
+}
+
+.get-invite-footer {
+  @include d-flex(row, nowrap, space-between, baseline);
+  width: 255px;
+  svg {
+    path {
+      stroke: $white;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  } 
+}
+
+
 
 .main-logo-footer  {
   path {
@@ -48,6 +86,37 @@
     path {
       fill: $white;
     }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    height: auto;
+    padding: 5% 10%;
+  }
+  .footer-inner {
+    @include box-reset();
+    height: auto;
+    @include d-flex(column, nowrap, space-between, center);
+  }
+
+  .footer-col {
+    min-height: 100px;
+    @include box-reset();
+    height: auto;
+    @include d-flex(column, nowrap, space-between, center);
+    margin-bottom: 20px;
+
+    &:first-child,
+    &:last-child {
+      @include box-reset();
+      margin-bottom: 20px;
+    }
+  }
+
+  .get-invite-footer {
+    @include box-reset();
+    @include d-flex(column, nowrap, space-between, center);
   }
 }
 

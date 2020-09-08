@@ -6,3 +6,11 @@
   @include d-flex(row, nowrap, stretch, stretch);
   //overflow: hidden;
 }
+
+@media only screen and (max-width: 650px) {
+  .stories-list {
+    width: 100%;
+    height: auto;
+    @include d-flex(row, wrap, stretch, stretch);
+  }
+}

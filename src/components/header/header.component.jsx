@@ -41,12 +41,14 @@ class Header extends Component {
             className="mobile menu-toggle" 
             src={openMenu} 
             alt="Open Menu"
+            onClick={(e) => this.toggleMenu(e)}
           />
           <img 
             id="close-menu" 
             className="mobile menu-toggle inactive" 
             src={closeMenu} 
             alt="Close Menu"
+            onClick={(e) => this.toggleMenu(e)}
           />
         </div>
         <div className="header-links">

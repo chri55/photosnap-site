@@ -52,3 +52,49 @@ a:hover {
     color: $black;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .header {
+    overflow: hidden;
+  }
+
+  .mobile {
+    display: inline-block;
+  }
+
+  .header-links {
+    position: absolute;
+    top: $nav-height;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: 0.4s;
+
+    &.active {
+      @include d-flex(column, nowrap, space-around, center);
+      z-index: 5;
+      opacity: 1;
+      width: 100%;
+      height: 200px;
+      top: $nav-height;
+      left:0;
+      background-color: white;
+      padding: 2% 10%;
+
+      &.get-invite {
+        @include d-flex(column, nowrap, center, center);
+        height: 50px;
+        top: calc(200px + #{$nav-height});
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+
+  .menu-toggle {
+    top: calc(200px + #{$nav-height});
+    &.inactive {
+      display: none;
+    }
+  }
+}

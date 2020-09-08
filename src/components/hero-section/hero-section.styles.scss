@@ -74,3 +74,59 @@
 .body-text {
   @include body();
 }
+
+@media only screen and (max-width: 1250px) {
+  .text {
+    width: 40%;
+    padding: 5%;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .text {
+    width: 70%;
+  }
+
+  .hero-img {
+    width: 30%;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .hero-section,
+  .hero-section.reverse {
+    @include d-flex(column, nowrap, flex-start, center);
+    width: 100%;
+  }
+
+  .text, 
+  .hero-img {
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+  }
+  .hero-img img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .text {
+    @include d-flex(column, nowrap, flex-start, flex-start)
+  }
+
+  .headline {
+    @include h2();
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}

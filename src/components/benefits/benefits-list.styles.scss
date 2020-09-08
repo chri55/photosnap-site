@@ -3,5 +3,11 @@
 .benefits-row {
   @include d-flex(row, nowrap, space-between, center);
   padding: 120px 165px;
+}
 
+@media only screen and (max-width: 800px) {
+  .benefits-row {
+    padding: 5% 10%;
+    @include d-flex(column, nowrap, space-between, center);
+  }
 }
