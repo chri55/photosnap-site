@@ -39,6 +39,10 @@ a:hover {
   }
 }
 
+.header-links {
+  @include d-flex(row, nowrap, flex-start, center)
+}
+
 .get-invite {
   @include h4();
   background-color: $black;
