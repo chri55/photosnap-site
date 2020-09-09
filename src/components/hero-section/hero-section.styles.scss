@@ -138,12 +138,11 @@
   .hero-img {
     width: 100%;
     object-fit: cover;
-    object-position: center;
   }
   .hero-img{
     height: 350px;
     img {
-      width: auto;
+      width: 100vw;
       height: 100%;
     }
   } 

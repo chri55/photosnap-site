@@ -1,0 +1,49 @@
+@import '../../global-styles/global.scss';
+
+.compare-section {
+  padding: 5%;
+}
+
+.compare-title {
+  @include h1;
+}
+
+.compare-row {
+  @include d-flex(column, nowrap);
+  margin: 20px 0;
+  > span:first-child {
+    @include h4();
+    margin: 5px 0;
+  }
+}
+
+hr.main {
+  height: 1px;
+  color: $black;
+  border: 1px solid black;
+}
+
+.plan-spec, 
+.checks {
+  @include d-flex(row, nowrap, flex-start, center);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  margin: 10px 0;
+  * {
+    text-align: left;
+    margin-right: 25%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .compare-row {
+    width: 100%;
+    @include d-flex(row, nowrap, space-between, baseline);
+  }
+
+  .plan-spec,
+  .checks {
+    width: 60%;
+  }
+}

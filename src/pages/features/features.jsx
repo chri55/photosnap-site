@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import BenefitsList from '../../components/benefits/benefits-list.component';
 import HeroSection from '../../components/hero-section/hero-section.component';
+import BetaAd from '../../components/beta-ad/beta-ad.component';
 
 import { 
   benefits,
@@ -25,6 +26,7 @@ class Features extends Component {
         <HeroSection {...benefits.hero}></HeroSection>
         <BenefitsList benefits={row1}></BenefitsList>
         <BenefitsList benefits={row2}></BenefitsList>
+        <BetaAd></BetaAd>
       </div>
     );
   }

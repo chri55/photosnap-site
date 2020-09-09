@@ -6,6 +6,8 @@ import {
 
 import HeroSection from '../../components/hero-section/hero-section.component';
 import PricingToggle from '../../components/pricing-toggler/pricing-toggler.component';
+import Compare from '../../components/compare/compare.component';
+import BetaAd from '../../components/beta-ad/beta-ad.component';
 
 class Pricing extends Component {
   render() {
@@ -13,6 +15,8 @@ class Pricing extends Component {
       <div>
         <HeroSection {...pricing.hero}></HeroSection>
         <PricingToggle></PricingToggle>
+        <Compare></Compare>
+        <BetaAd></BetaAd>
       </div>
     );
   }

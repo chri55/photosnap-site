@@ -5,9 +5,17 @@
   padding: 120px 165px;
 }
 
+.benefits-row + .benefits-row {
+  padding: 0px 165px 120px 165px;
+}
+
 @media only screen and (max-width: 800px) {
   .benefits-row {
     padding: 5% 10%;
     @include d-flex(column, nowrap, space-between, center);
+  }
+
+  .benefits-row + .benefits-row {
+    padding: 5% 10%;
   }
 }
